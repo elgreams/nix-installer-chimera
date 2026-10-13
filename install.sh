@@ -628,7 +628,7 @@ may still have dangling ~/.nix-profile and ~/.nix-defexpr links to delete.
 EOF
 }
 
-# shellcheck disable=SC2329 # invoked via trap
+# shellcheck disable=SC2317,SC2329 # invoked via trap
 cleanup() {
     if [ -n "${WORKDIR:-}" ] && [ -d "$WORKDIR" ]; then
         chmod -R u+w "$WORKDIR" 2>/dev/null || true
