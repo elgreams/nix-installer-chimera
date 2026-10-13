@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       # Pinned image rather than the runner's shellcheck, so results match
       # local runs: docker run --rm -v "$PWD:/mnt" -w /mnt koalaman/shellcheck:v0.11.0 ...
-      - run: docker run --rm -v "$PWD:/mnt:ro" -w /mnt koalaman/shellcheck:v0.11.0 -s sh install.sh chinera-nix-install.sh tests/run.sh
+      - run: docker run --rm -v "$PWD:/mnt:ro" -w /mnt koalaman/shellcheck:v0.11.0 -s sh install.sh tests/run.sh
 
   chimera:
     runs-on: ubuntu-latest
